@@ -29,6 +29,9 @@ RUN pip install $PIP_PACKAGES_COMMON --upgrade
 RUN pip install $PIP_PACKAGES_KALE --upgrade
 RUN jupyter labextension install kubeflow-kale-labextension@0.6.1
 
+RUN git clone https://github.com/yefovar/docker-image-build-and-push-tesis.git
+RUN pip install -r docker-image-build-and-push-tesis/requirements.txt
+
 VOLUME ["/shared_volume"]
 
 WORKDIR /
