@@ -33,6 +33,7 @@ RUN jupyter labextension install kubeflow-kale-labextension@0.6.1
 RUN pip install pandas==1.1.5 --upgrade
 RUN pip install boto3==1.18.17 --upgrade
 RUN pip install botocore==1.21.17 --upgrade
+RUN pip install awscli --upgrade
 
 VOLUME ["/shared_volume"]
 
